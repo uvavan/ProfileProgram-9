@@ -9,6 +9,6 @@
 import UIKit
 
 protocol EditProfileDelegate {
-    func  userDidChange(firstName:  String, lastName:  String)
+    func  userDidChange(firstName:  String, lastName:  String, ageMore50: Bool)
     func  userDidResetInfo()
 }
