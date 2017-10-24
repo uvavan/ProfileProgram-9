@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		841FCCC41F9F1D16000A2B08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FCCC31F9F1D16000A2B08 /* AppDelegate.swift */; };
-		841FCCC61F9F1D16000A2B08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FCCC51F9F1D16000A2B08 /* ViewController.swift */; };
+		841FCCC61F9F1D16000A2B08 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FCCC51F9F1D16000A2B08 /* RootViewController.swift */; };
 		841FCCC91F9F1D16000A2B08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841FCCC71F9F1D16000A2B08 /* Main.storyboard */; };
 		841FCCCB1F9F1D16000A2B08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841FCCCA1F9F1D16000A2B08 /* Assets.xcassets */; };
 		841FCCCE1F9F1D16000A2B08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841FCCCC1F9F1D16000A2B08 /* LaunchScreen.storyboard */; };
+		843B58C81F9F28B100A2E4E0 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B58C71F9F28B100A2E4E0 /* EditViewController.swift */; };
+		843B58CA1F9F290900A2E4E0 /* EditProfileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B58C91F9F290900A2E4E0 /* EditProfileDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		841FCCC01F9F1D16000A2B08 /* ProfileProgram9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileProgram9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841FCCC31F9F1D16000A2B08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		841FCCC51F9F1D16000A2B08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		841FCCC51F9F1D16000A2B08 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		841FCCC81F9F1D16000A2B08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		841FCCCA1F9F1D16000A2B08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841FCCCD1F9F1D16000A2B08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841FCCCF1F9F1D16000A2B08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		843B58C71F9F28B100A2E4E0 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		843B58C91F9F290900A2E4E0 /* EditProfileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				841FCCC31F9F1D16000A2B08 /* AppDelegate.swift */,
-				841FCCC51F9F1D16000A2B08 /* ViewController.swift */,
+				841FCCC51F9F1D16000A2B08 /* RootViewController.swift */,
+				843B58C71F9F28B100A2E4E0 /* EditViewController.swift */,
 				841FCCC71F9F1D16000A2B08 /* Main.storyboard */,
 				841FCCCA1F9F1D16000A2B08 /* Assets.xcassets */,
 				841FCCCC1F9F1D16000A2B08 /* LaunchScreen.storyboard */,
 				841FCCCF1F9F1D16000A2B08 /* Info.plist */,
+				843B58C91F9F290900A2E4E0 /* EditProfileDelegate.swift */,
 			);
 			path = ProfileProgram9;
 			sourceTree = "<group>";
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				841FCCC61F9F1D16000A2B08 /* ViewController.swift in Sources */,
+				841FCCC61F9F1D16000A2B08 /* RootViewController.swift in Sources */,
 				841FCCC41F9F1D16000A2B08 /* AppDelegate.swift in Sources */,
+				843B58CA1F9F290900A2E4E0 /* EditProfileDelegate.swift in Sources */,
+				843B58C81F9F28B100A2E4E0 /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
