@@ -80,8 +80,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Профиль" id="dH3-OL-SNJ"/>
                     <connections>
-                        <outlet property="iblabelLastName" destination="HpW-ua-egG" id="ghV-5t-HRa"/>
-                        <outlet property="iblabelName" destination="3Aj-6t-jto" id="rXx-u0-xL4"/>
+                        <outlet property="ibLabelLastName" destination="HpW-ua-egG" id="nBu-N8-Xga"/>
+                        <outlet property="ibLabelName" destination="3Aj-6t-jto" id="MWe-9V-Rai"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

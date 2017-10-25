@@ -12,38 +12,50 @@ class EditViewController: UIViewController {
 
     @IBOutlet private weak var ibTextName: UITextField!
     @IBOutlet private weak var ibTextLastName: UITextField!
-    @IBOutlet private weak var ibSwitchUser: UISwitch!
+    @IBOutlet weak var ibSwitchUser: UISwitch!
     @IBOutlet private weak var ibLabelHello: UILabel!
     var name: String = ""
     var lastName: String = ""
     var ageMore50: Bool = true
+//    {
+//        get {
+//            return ibSwitchUser.isOn
+//        }
+//        set{
+//
+//        }
+//    }
     
     var delegate: EditProfileDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ibTextName.delegate = self
-        ibTextLastName.delegate = self
         if !name.isEmpty || !lastName.isEmpty {
             ibTextName.text = name
             ibTextLastName.text = lastName
-            updateLabelHello()
             ibSwitchUser.isOn = ageMore50
+            updateLabelHello()
         }
     }
     
     private func updateLabelHello() {
-        if ibSwitchUser.isOn {
-            ibLabelHello.text = "Здравствуйте, \(name) \(lastName)"
-        } else {
-            ibLabelHello.text = "Привет, \(name)"
+        ageMore50 = ibSwitchUser.isOn
+        if !name.isEmpty, !lastName.isEmpty {
+            if ageMore50 {
+                ibLabelHello.text = "Здравствуйте, \(name) \(lastName)"
+            } else {
+                ibLabelHello.text = "Привет, \(name)"
+            }
+            ibLabelHello.isHidden = false
         }
-        ibLabelHello.isHidden = false
     }
     
     @IBAction private func ibButtonOkPress(_ sender: Any) {
         view.endEditing(true)
-        delegate?.userDidChange(firstName: name, lastName: lastName, ageMore50: ibSwitchUser.isOn)
+        name = ibTextName.text ?? "Undefined"
+        lastName = ibTextLastName.text ?? "Undefined"
+        ageMore50 = ibSwitchUser.isOn
+        delegate?.userDidChange(firstName: name, lastName: lastName, ageMore50: ageMore50)
         updateLabelHello()
     }
     
@@ -52,26 +64,15 @@ class EditViewController: UIViewController {
         delegate?.userDidResetInfo()
         ibTextName.text = ""
         ibTextLastName.text = ""
+        name = ""
+        lastName = ""
         ibLabelHello.isHidden = true
-        ibSwitchUser.isOn = true
+        ageMore50 = true
+        ibSwitchUser.isOn = ageMore50
     }
     
     @IBAction private func ibSwitchChanged(_ sender: Any) {
         updateLabelHello()
     }
-    
 }
-
-extension EditViewController: UITextFieldDelegate{
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField === ibTextName{
-            name = textField.text ?? "Undefined"
-        } else if textField === ibTextLastName {
-            lastName = textField.text ?? "Undefined"
-        }
-    }
-}
-
-
-
 

@@ -10,8 +10,8 @@ import UIKit
 
 class RootViewController: UIViewController {
     
-    @IBOutlet private weak var iblabelName: UILabel!
-    @IBOutlet private weak var iblabelLastName: UILabel!
+    @IBOutlet private weak var ibLabelName: UILabel!
+    @IBOutlet private weak var ibLabelLastName: UILabel!
     private var ageMore50: Bool = true
     
     override func viewDidLoad() {
@@ -23,10 +23,11 @@ class RootViewController: UIViewController {
         if segue.identifier == "editProfile", let destVC = segue.destination as? EditViewController {
             destVC.delegate = self
             destVC.ageMore50 = self.ageMore50
-            if let name = iblabelName.text {
+            //destVC
+            if let name = ibLabelName.text {
                 destVC.name = name
             }
-            if let lastName = iblabelLastName.text {
+            if let lastName = ibLabelLastName.text {
                 destVC.lastName = lastName
             }
         }
@@ -36,12 +37,12 @@ class RootViewController: UIViewController {
 
 extension RootViewController: EditProfileDelegate{
     func userDidResetInfo() {
-        iblabelName.text = ""
-        iblabelLastName.text = ""
+        ibLabelName.text = ""
+        ibLabelLastName.text = ""
     }
     func userDidChange(firstName: String, lastName: String, ageMore50: Bool) {
-        iblabelName.text = firstName
-        iblabelLastName.text = lastName
+        ibLabelName.text = firstName
+        ibLabelLastName.text = lastName
         self.ageMore50 = ageMore50
     }
 }
